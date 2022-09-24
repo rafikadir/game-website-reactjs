@@ -10,27 +10,27 @@ import { FaPlaystation, FaXbox, FaAppStoreIos } from "react-icons/fa";
 const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">
+            <ul className="nav flex-column">
+                <li className="nav-item">
+                    <a className="nav-link active" href="#">
                         <BiHomeAlt/>
                         Home
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <BiHeart/>
                         Wishlist
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <BiLayer/>
                         Library
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <BiGroup />
                         People you Follow
                     </a>
@@ -40,20 +40,20 @@ const Sidebar = () => {
                     New Releases
                 </h4>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                <li className="nav-item">
+                    <a className="nav-link active" href="#">
                         <BiStar/>
                         Last 30 Days
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <AiOutlineFire/>
                         This Week
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <TbPlayerTrackNext/>
                         Next Week
                     </a>
@@ -63,32 +63,32 @@ const Sidebar = () => {
                     Platforms
                 </h4>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                <li className="nav-item">
+                    <a className="nav-link active" href="#">
                         <BsWindows/>
                         PC
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <FaXbox/>
                         Xbox One
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <FaAppStoreIos/>
                         iOS
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <AiFillAndroid/>
                         Android
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <li className="nav-item">
+                    <a className="nav-link" href="#">
                         <FaPlaystation/>
                         PlayStation
                     </a>

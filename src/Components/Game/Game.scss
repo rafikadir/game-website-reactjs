@@ -1,0 +1,125 @@
+@import './../Sass/colors.scss';
+@import './../Sass/fonts.scss';
+
+.game-card {
+    background: $bg-dark;
+    margin-bottom: 20px;
+    transition: .3s;
+    border-radius: 15px;
+    position: relative;
+
+    .game-media {
+        overflow: hidden;
+        border-radius: 15px 15px 0 0;
+
+        .game-img {
+            height: 250px;
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .game-text {
+        padding: 20px;
+
+        .game-meta {
+            margin-bottom: 10px;
+
+            .metacritic {
+                color: #6dc849;
+                border: 1px solid #6dc84974;
+                padding: 0px 10px;
+                font-size: 12px;
+                display: inline-block;
+                border-radius: 3px;
+            }
+        }
+    
+        .title {
+            margin-bottom: 10px;
+            display: inline-block;
+            font-size: 22px;
+            font-family: $heading-font;
+            color: $text-white;
+            transition: .4s;
+    
+            &:hover {
+                color: hsla(0,0%,100%,.4) !important;
+            }
+        }
+    
+
+        .game-bottom {
+            margin-bottom: 10px;
+
+            span {
+                background: hsla(0,0%,100%,.1);
+                display: inline-block;
+                font-size: 12px;
+                padding: 4px 10px;
+                margin-right: 5px;
+                border-radius: 4px;
+    
+                svg {
+                    font-size: 14px;
+                    margin-right: 4px;
+                    top: -2px;
+                    position: relative;
+                }
+            }
+        }
+    
+        .game-info {
+            position: absolute;
+            background: $bg-dark;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: -115px;
+            padding: 0 20px 20px;
+            border-radius: 0 0 15px 15px;
+            z-index: 99;
+            display: none;
+            
+            ul {
+                padding: 0;
+                margin: 0;
+    
+                li {
+                    list-style: none;
+                    font-size: 11px;
+                    color:  hsla(0,0%,100%,.4);
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    border-bottom: 1px solid  hsla(0,0%,100%,.1);
+    
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                
+                    span {
+                        color: $text-white;
+                        font-size: 12px;
+    
+                        .genre {
+                            margin-left: 3px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        transform: scale(1.03);
+        z-index: 99;
+    }
+
+    &:hover .game-text .game-info {
+       display: block;
+    }
+}
