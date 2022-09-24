@@ -1,0 +1,35 @@
+@import './../Sass/colors.scss';
+@import './../Sass/fonts.scss';
+
+
+.sidebar {
+    padding-top: 50px;
+
+    .nav {
+        .nav-link {
+            font-size: 18px;
+            padding: 0 0 !important;
+            margin-bottom: 5px;
+
+            svg {
+                background: #3b3939;
+                width: 35px;
+                height: 35px;
+                padding: 8px;
+                border-radius: 3px;
+                margin-right: 10px;
+                line-height: 35px;
+                transition: .2s;
+            }
+
+            &:hover  svg {
+                background:$text-white;
+                color: #3b3939;
+            }
+        }
+
+        .sidebar-title {
+            margin: 30px 0 5px; 
+        }
+    }
+}
