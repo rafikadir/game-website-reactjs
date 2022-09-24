@@ -3,11 +3,12 @@ import './Game.scss';
 import { GoPlus } from "react-icons/go";
 import { AiOutlineStar } from "react-icons/ai";
 import { MdOutlineReviews } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 const Game = ({games}) => {
 
-    const {name,background_image, metacritic,added, rating, reviews_count, released, rating_top, genres} = games;
+    const {name,background_image, metacritic,added, rating, reviews_count, released, rating_top, genres, slug} = games;
 
     return (
         <div className='col-lg-3'>
@@ -21,7 +22,7 @@ const Game = ({games}) => {
                         <span className='metacritic' title='Metascore'>{metacritic}</span>
                     </div>
                     <div className="game-title">
-                        <a className='title' href='/'>{name}</a>
+                        <Link to={`${slug}`} className='title' href='/'>{name}</Link>
                     </div>
                     <div className='game-bottom'>
                         <span><GoPlus/>{added}</span>

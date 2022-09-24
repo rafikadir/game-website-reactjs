@@ -1,0 +1,28 @@
+@import './../../Components/Sass/colors.scss';
+@import './../../Components/Sass/fonts.scss';
+
+.game-details-content {
+    .game-details-title {
+        font-size: 50px;
+        font-family: $heading-font;
+        margin-bottom: 25px;
+    }
+
+    .add-to-wishlist {
+        background: transparent;
+        border: none;
+        color: $text-white;
+        border: 1px solid $text-white;
+        padding: 10px 25px;
+        font-size: 18px;
+        border-radius: 5px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            margin-left: 10px;
+            top: -1px;
+            position: relative;
+        }
+    }
+}

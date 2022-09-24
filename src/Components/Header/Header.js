@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { BiUserCircle } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-2">
                         <div className='logo'>
-                        <   a href="/">Gamez</a>
+                            <Link to="/">Gamez</Link>
                         </div>
                     </div>
 
