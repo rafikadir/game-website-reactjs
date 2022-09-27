@@ -5,6 +5,7 @@ import { AiOutlineFire,AiFillAndroid} from "react-icons/ai";
 import { TbPlayerTrackNext } from "react-icons/tb";
 import { BsWindows } from "react-icons/bs";
 import { FaPlaystation, FaXbox, FaAppStoreIos } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -12,10 +13,10 @@ const Sidebar = () => {
         <div className='sidebar'>
             <ul className="nav flex-column">
                 <li className="nav-item">
-                    <a className="nav-link active" href="#">
+                    <Link className="nav-link active" to="/">
                         <BiHomeAlt/>
                         Home
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">

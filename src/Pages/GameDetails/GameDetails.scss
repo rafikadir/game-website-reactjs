@@ -1,6 +1,24 @@
 @import './../../Components/Sass/colors.scss';
 @import './../../Components/Sass/fonts.scss';
 
+.game-details {
+    position: relative;
+
+    .game-details-banner {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: .05;
+        position: absolute;
+        top: -120px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
 .game-details-content {
     .game-details-title {
         font-size: 50px;
@@ -16,6 +34,8 @@
         padding: 10px 25px;
         font-size: 18px;
         border-radius: 5px;
+        transition: .5s;
+        margin-bottom: 25px;
 
         svg {
             width: 25px;
@@ -24,5 +44,39 @@
             top: -1px;
             position: relative;
         }
+
+        &:hover {
+            background: rgba(255, 255,255,0.2);
+        }
+    }
+
+    .game-desc {
+        margin-bottom: 25px;
+    }
+
+    .meta-details-box {
+        margin-bottom: 25px;
+
+        .meta-details-box-title {
+            color: hsla(0,0%,100%,.2);
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-right: 5px;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.game-details-img {
+    img {
+        border-radius: 10px;
     }
 }
