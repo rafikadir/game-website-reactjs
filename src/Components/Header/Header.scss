@@ -52,8 +52,19 @@
         }
 
         .dropdown-menu {
+            border-radius: 5px;
+            padding: 10px 0px;
+
             .dropdown-item {
                 color: $text-black !important;
+
+                &:focus {
+                    background: transparent;
+                }
+
+                &.signIn {
+                    font-weight: 600;
+                }
             }
         }
     }

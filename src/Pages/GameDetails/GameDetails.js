@@ -10,7 +10,6 @@ const GameDetails = () => {
 
     let {slug} = useParams();
     const isLoad = true;
-    const text = "loading...";
 
     const [game, setGame] = useState({});
     useEffect(() => {
@@ -25,7 +24,6 @@ const GameDetails = () => {
             website} = isLoad ? game : null;
 
     console.log(game)
-
 
     return (
         <>
