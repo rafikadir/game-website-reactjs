@@ -11,7 +11,7 @@ const Game = ({games}) => {
     const {name,background_image, metacritic,added, rating, reviews_count, released, rating_top, genres, slug} = games;
 
     return (
-        <div className='col-lg-3'>
+        <div className='col-md-3'>
             <div className="game-card">
                 <div className="game-media">
                     <div className="game-img" style={{ backgroundImage:`url('${background_image}')`}}></div>

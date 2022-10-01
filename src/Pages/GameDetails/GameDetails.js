@@ -23,7 +23,6 @@ const GameDetails = () => {
         , genres, publishers, tags, developers, 
             website} = isLoad ? game : null;
 
-    console.log(game)
 
     return (
         <>
