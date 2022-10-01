@@ -3,11 +3,8 @@ import './Header.scss';
 import { BiUserCircle } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import dropdownItems from './HeaderData';
-import useFireBase from '../../auth/useFireBase';
 
 const Header = () => {
-
-    const {user, handleGoogleSignout} = useFireBase();
 
     return (
         <header className='header-area'>
@@ -28,7 +25,6 @@ const Header = () => {
                     </div>
                     <div className="col-lg-2">
                         <div className='user-area'>
-                            <p>Hi, {user?.displayName}</p>
                             <div class="btn-group">                   
                                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                    <BiUserCircle />
@@ -39,13 +35,7 @@ const Header = () => {
                                             <li><Link to={dropdownItem.link} className="dropdown-item">{dropdownItem.name}</Link></li>
                                         )
                                     }
-                                    {
-                                        user?.uid 
-                                        ? 
-                                        <button onClick={handleGoogleSignout}>Sign Out</button> 
-                                        :
-                                        <li><Link to="/signin" className="dropdown-item signIn">Sign In</Link></li>
-                                    }
+                                    <li><Link to="/signin" className="dropdown-item signIn">Sign In</Link></li>
                                 </ul>
                             </div>  
                         </div>
