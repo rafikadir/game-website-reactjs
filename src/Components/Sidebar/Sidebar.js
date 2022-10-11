@@ -31,10 +31,10 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" to="/">
                         <BiGroup />
                         People you Follow
-                    </a>
+                    </Link>
                 </li>
 
                 <h4 className='sidebar-title'>
@@ -42,22 +42,22 @@ const Sidebar = () => {
                 </h4>
 
                 <li className="nav-item">
-                    <a className="nav-link active" href="#">
+                    <Link className="nav-link active" to="/">
                         <BiStar/>
                         Last 30 Days
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" href="#">
                         <AiOutlineFire/>
                         This Week
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" href="#">
                         <TbPlayerTrackNext/>
                         Next Week
-                    </a>
+                    </Link>
                 </li>
 
                 <h4 className='sidebar-title'>
@@ -65,34 +65,34 @@ const Sidebar = () => {
                 </h4>
 
                 <li className="nav-item">
-                    <a className="nav-link active" href="#">
+                    <Link className="nav-link active" href="#">
                         <BsWindows/>
                         PC
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" href="#">
                         <FaXbox/>
                         Xbox One
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" href="#">
                         <FaAppStoreIos/>
                         iOS
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" href="#">
                         <AiFillAndroid/>
                         Android
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link className="nav-link" href="#">
                         <FaPlaystation/>
                         PlayStation
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>

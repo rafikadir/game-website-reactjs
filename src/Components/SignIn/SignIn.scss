@@ -53,7 +53,7 @@
             }
         }
 
-        button {
+        .btn {
             width: 100%;
             color: #dddddd;
             background: $text-black;
@@ -61,6 +61,14 @@
             &:hover {
                 background: $bg-dark;    
             }
+        }
+
+        .switch-login {
+            line-height: 1;
+            background: transparent;
+            padding: 0;
+            color: $text-white;
+            font-weight: 700;
         }
     }
 }
