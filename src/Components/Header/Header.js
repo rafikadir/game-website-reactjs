@@ -3,8 +3,12 @@ import './Header.scss';
 import { BiUserCircle } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import dropdownItems from './HeaderData';
+import useFirebase from '../../hooks/useFirebase';
+import { useState } from 'react';
 
 const Header = () => {
+
+    const {user, handleSignout} = useFirebase();
 
     return (
         <header className='header-area'>
@@ -12,7 +16,7 @@ const Header = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-2">
                         <div className='logo'>
-                            <Link to="/">Gamez</Link>
+                            <Link to="/">Game Zone</Link>
                         </div>
                     </div>
 
@@ -25,7 +29,7 @@ const Header = () => {
                     </div>
                     <div className="col-lg-2">
                         <div className='user-area'>
-                            <div class="btn-group">                   
+                            <div class="btn-group">   
                                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                    <BiUserCircle />
                                 </button>
@@ -35,7 +39,13 @@ const Header = () => {
                                             <li><Link to={dropdownItem.link} className="dropdown-item">{dropdownItem.name}</Link></li>
                                         )
                                     }
-                                    <li><Link to="/signin" className="dropdown-item signIn">Sign In</Link></li>
+                                    <li>
+                                        {!user?.uid 
+                                        ? 
+                                        <Link to="/signin" className="dropdown-item signIn">Sign In</Link>
+                                        :
+                                        <button onClick={handleSignout} className="dropdown-item signIn">Sign Out</button>}
+                                    </li>
                                 </ul>
                             </div>  
                         </div>
