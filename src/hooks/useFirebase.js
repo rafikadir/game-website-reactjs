@@ -30,7 +30,6 @@ const useFirebase = () => {
         .catch((error) => {
             console.log(error);
         });
-
         e.preventDefault();
     };
 
@@ -43,7 +42,6 @@ const useFirebase = () => {
         })
         .catch((error) => {
         });
-
         e.preventDefault();
     };
 

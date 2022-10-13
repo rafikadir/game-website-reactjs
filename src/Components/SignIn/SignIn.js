@@ -2,19 +2,29 @@ import React from 'react';
 import './SignIn.scss';
 import { useState } from 'react';
 import useFirebase from '../../hooks/useFirebase';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SignIn = () => { 
     
-    const  {handleGoogleAuth,handleForm,handleEmailData,handlePass,handleLogIn} = useFirebase();
+    const {user} = useFirebase();
+
+    const {handleGoogleAuth,handleForm,handleEmailData,handlePass,handleLogIn} = useFirebase();
     const [hasAccount, setHasAccount] = useState(false);
-
-
+    
     //Handle Button Toggle in
     const LogInCng = () =>{
         setHasAccount(true);
     }
     const SignUpCng = () => {
         setHasAccount(false);
+    }
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from.pathname || '/';
+
+    if(user){
+        navigate(from, {replace: true});
     }
 
     return (
