@@ -25,9 +25,9 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" href="#">
+                    <Link className="nav-link" to="/favourite">
                         <BiLayer/>
-                        Library
+                        Favourite
                     </Link>
                 </li>
                 <li className="nav-item">

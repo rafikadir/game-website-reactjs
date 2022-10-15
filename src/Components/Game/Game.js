@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 const Game = ({games}) => {
-
     const {name,background_image, metacritic,added, rating, reviews_count, released, rating_top, genres, slug} = games;
+    console.log(games);
 
     return (
         <div className='col-md-3'>

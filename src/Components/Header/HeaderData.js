@@ -1,7 +1,7 @@
 const dropdownItems = [
     {
         'name': 'My Account',
-        'link': '/'
+        'link': 'account'
     },
     {
         'name': 'Favourite',

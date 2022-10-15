@@ -5,7 +5,6 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Home = () => {
     const {user} = useFirebase();
-    const displayNone = '';
 
     return (
         <div className='container-fluid px-4 mt-5'>
@@ -18,7 +17,7 @@ const Home = () => {
                     { user?.displayName ?
                         <h1 className='mb-4'>HI, Rafi Kadir</h1>
                         :
-                        displayNone
+                        <h1 className='mb-4'>Top Picks</h1>
                     }
                    <Games />
                 </div>

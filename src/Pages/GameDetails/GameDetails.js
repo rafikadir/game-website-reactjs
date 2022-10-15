@@ -4,8 +4,7 @@ import { useParams } from 'react-router-dom';
 import Sidebar from './../../Components/Sidebar/Sidebar';
 import './GameDetails.scss';
 import { FcPlus } from "react-icons/fc";
-
-
+import {addToDb} from '../../utils/fakedb';
 
 const GameDetails = () => {
 
@@ -18,12 +17,13 @@ const GameDetails = () => {
         fetch(url)
             .then((res) => res.json())
             .then(data =>setGame(data))
-    },[])
+    },[slug]);
 
-    const {updated, name, description_raw, background_image, parent_platforms
-        , genres, publishers, tags, developers, 
-            website} = isLoad ? game : null;
+    const {updated, name, description_raw, background_image, parent_platforms ,genres, publishers, tags, developers, website} = isLoad ? game : null;
 
+    const handleWishlist = (game) => {
+       addToDb(game.id);
+    };
 
     return (
         <>
@@ -41,7 +41,7 @@ const GameDetails = () => {
                                     <div className="game-details-content">
                                         <h6>{updated}</h6>
                                         <h2 className='game-details-title'>{name}</h2>
-                                        <button className='add-to-wishlist'>
+                                        <button onClick={()=>handleWishlist(game)} className='add-to-wishlist'>
                                             Add to Wishlist
                                             <FcPlus/>
                                         </button>

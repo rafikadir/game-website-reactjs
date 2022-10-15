@@ -5,8 +5,8 @@ import GameDetails from './Pages/GameDetails/GameDetails';
 import Home from './Pages/Home/Home';
 import { Routes, Route} from "react-router-dom";
 import SignIn from './Components/SignIn/SignIn';
-import WishList from './Pages/WishList/WishList';
 import RequireAuth from './Components/auth/RequireAuth';
+import Account from './Pages/Account/Account';
 
 function App() {
 
@@ -17,11 +17,22 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/:slug" element={<GameDetails />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/account" element={ 
+              <RequireAuth>
+                <Account/>
+              </RequireAuth>
+            } />
           <Route path="/wishlist" element={ 
             <RequireAuth>
-              <WishList />
+              <Account/>
             </RequireAuth>
           } />
+
+          <Route path="/favourite" element={ 
+            <RequireAuth>
+              <Account/>
+            </RequireAuth>}
+          />
       </Routes>
     </>
   );
